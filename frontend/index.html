@@ -103,7 +103,7 @@
     .cursor {
       width: 10px;
       height: 10px;
-      background-color: var(--black);
+      background-color: var(--cursor-color, var(--black));
       border-radius: 50%;
       position: fixed;
       top: 0;
@@ -111,12 +111,13 @@
       pointer-events: none;
       z-index: 9999;
       transform: translate(-50%, -50%);
+      transition: background-color 0.2s ease;
     }
 
     .cursor-ring {
       width: 36px;
       height: 36px;
-      border: 1.5px solid var(--black);
+      border: 1.5px solid var(--cursor-color, var(--black));
       border-radius: 50%;
       position: fixed;
       top: 0;
@@ -124,7 +125,7 @@
       pointer-events: none;
       z-index: 9998;
       transform: translate(-50%, -50%);
-      transition: transform var(--transition-base);
+      transition: transform var(--transition-base), border-color 0.2s ease;
       opacity: 0.5;
     }
 
@@ -243,8 +244,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       background:
-        radial-gradient(circle at top left, rgba(118, 171, 255, 0.18), transparent 34%),
-        linear-gradient(135deg, #edf4ff 0%, #f7fbff 52%, #e7f1ff 100%);
+        radial-gradient(circle at top left, rgba(175, 154, 255, 0.2), transparent 34%),
+        linear-gradient(135deg, #f4efff 0%, #fbf8ff 52%, #efe7ff 100%);
     }
 
     .hero-content {
@@ -297,14 +298,14 @@
     .hero-name em {
       font-style: italic;
       font-weight: 400;
-      color: #5f77a5;
+      color: #7d68a6;
     }
 
     .hero-title {
       font-family: var(--font-mono);
       font-size: 13px;
       letter-spacing: 0.12em;
-      color: #47699d;
+      color: #765eab;
       text-transform: uppercase;
       margin-bottom: 28px;
     }
@@ -312,7 +313,7 @@
     .hero-bio {
       font-size: 16px;
       line-height: 1.75;
-      color: #35517c;
+      color: #614d86;
       max-width: 440px;
       margin-bottom: 40px;
     }
@@ -338,39 +339,39 @@
     }
 
     .btn-primary {
-      background-color: #153a76;
+      background-color: #5f4b8b;
       color: var(--white);
       border: none;
     }
 
     .btn-primary:hover {
-      background-color: #0f2d5b;
+      background-color: #4d3c73;
       transform: translateY(-2px);
     }
 
     .btn-outline {
       background-color: transparent;
-      color: #153a76;
-      border: 1.5px solid #153a76;
+      color: #5f4b8b;
+      border: 1.5px solid #5f4b8b;
     }
 
     .btn-outline:hover {
-      background-color: #153a76;
+      background-color: #5f4b8b;
       color: var(--white);
       transform: translateY(-2px);
     }
 
     .btn-download {
       background-color: transparent;
-      color: #153a76;
-      border: 1.5px solid rgba(82, 132, 212, 0.35);
+      color: #5f4b8b;
+      border: 1.5px solid rgba(145, 118, 210, 0.35);
       display: inline-flex;
       align-items: center;
       gap: var(--space-sm);
     }
 
     .btn-download:hover {
-      background-color: rgba(123, 173, 255, 0.18);
+      background-color: rgba(188, 162, 245, 0.18);
       transform: translateY(-2px);
     }
 
@@ -381,19 +382,19 @@
     /* Hero Visual */
     .hero-visual {
       position: relative;
-      background: linear-gradient(160deg, #dbe9ff 0%, #bfd8ff 100%);
+      background: linear-gradient(160deg, #eadfff 0%, #d2c4ff 100%);
       overflow: hidden;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      padding: 72px 14px 0;
     }
 
     .hero-image {
-      width: 80%;
-      max-width: 420px;
+      width: min(88%, 440px);
       aspect-ratio: 3/4;
       object-fit: cover;
-      object-position: top;
+      object-position: center top;
       border-radius: 200px 200px 0 0;
       display: block;
       margin-top: auto;
@@ -404,7 +405,7 @@
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      background-color: rgba(123, 158, 255, 0.45);
+      background-color: rgba(180, 150, 255, 0.42);
       top: -80px;
       right: -80px;
       opacity: 0.6;
@@ -415,7 +416,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background-color: rgba(140, 210, 255, 0.42);
+      background-color: rgba(215, 175, 255, 0.36);
       bottom: 100px;
       left: -60px;
       opacity: 0.7;
@@ -514,10 +515,10 @@
     /* -------------------- */
     #education {
       background:
-        linear-gradient(180deg, #eaf3ff 0%, #dceaff 100%);
+        linear-gradient(180deg, #f3edff 0%, #e7ddff 100%);
       padding: 100px var(--space-3xl);
-      border-top: 1px solid rgba(97, 143, 214, 0.16);
-      border-bottom: 1px solid rgba(97, 143, 214, 0.16);
+      border-top: 1px solid rgba(144, 120, 202, 0.18);
+      border-bottom: 1px solid rgba(144, 120, 202, 0.18);
     }
 
     .education-grid {
@@ -531,9 +532,9 @@
       background-color: rgba(255, 255, 255, 0.85);
       border-radius: 16px;
       margin-bottom: var(--space-md);
-      border: 1px solid rgba(102, 144, 208, 0.22);
+      border: 1px solid rgba(145, 118, 210, 0.22);
       transition: all var(--transition-base);
-      box-shadow: 0 16px 38px rgba(92, 132, 198, 0.08);
+      box-shadow: 0 16px 38px rgba(125, 101, 183, 0.1);
     }
 
     .education-card:hover {
@@ -560,24 +561,24 @@
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 4px;
-      color: #173463;
+      color: #4e3c78;
     }
 
     .education-school {
       font-size: 13px;
-      color: #56739f;
+      color: #7e6f9e;
     }
 
     .education-year {
       font-family: var(--font-mono);
       font-size: 11px;
-      color: #4e6f9f;
+      color: #755f9f;
       padding: 4px 10px;
-      background-color: rgba(141, 182, 246, 0.16);
+      background-color: rgba(184, 162, 245, 0.2);
       border-radius: 100px;
       display: inline-block;
       margin-top: var(--space-sm);
-      border: 1px solid rgba(102, 144, 208, 0.18);
+      border: 1px solid rgba(145, 118, 210, 0.2);
     }
 
     .publication-card {
@@ -585,14 +586,14 @@
       background-color: rgba(255, 255, 255, 0.85);
       border-radius: 16px;
       margin-bottom: var(--space-md);
-      border: 1px solid rgba(102, 144, 208, 0.22);
-      border-left: 4px solid #9ab6ea;
+      border: 1px solid rgba(145, 118, 210, 0.22);
+      border-left: 4px solid #c0a8ff;
       transition: all var(--transition-base);
-      box-shadow: 0 16px 38px rgba(92, 132, 198, 0.08);
+      box-shadow: 0 16px 38px rgba(125, 101, 183, 0.1);
     }
 
     .publication-card:nth-child(2) {
-      border-left-color: #7dd5f0;
+      border-left-color: #d8a7f4;
     }
 
     .publication-card:hover {
@@ -608,18 +609,18 @@
     }
 
     .publication-title a {
-      color: #173463;
+      color: #4e3c78;
       text-decoration: none;
       transition: color var(--transition-fast);
     }
 
     .publication-title a:hover {
-      color: #3e6db0;
+      color: #7d61c0;
     }
 
     .publication-venue {
       font-size: 12px;
-      color: #5d78a1;
+      color: #7e6f9e;
       font-style: italic;
       margin-bottom: var(--space-sm);
     }
@@ -628,7 +629,7 @@
       display: inline-block;
       font-size: 11px;
       font-family: var(--font-mono);
-      color: #173463;
+      color: #4e3c78;
       text-decoration: underline;
       text-underline-offset: 4px;
       margin-top: var(--space-xs);
@@ -638,10 +639,10 @@
     /* Experience Section */
     /* -------------------- */
     #experience {
-      background-color: var(--navy);
+      background: linear-gradient(180deg, #050d1f 0%, #0a1329 100%);
       color: var(--white);
       padding: 110px var(--space-3xl);
-      border-top: 1px solid var(--line-dark);
+      border-top: 1px solid rgba(144, 120, 202, 0.18);
     }
 
     .experience-grid {
@@ -656,9 +657,9 @@
       gap: 48px;
       align-items: start;
       padding: 42px 48px;
-      border: 1px solid rgba(110, 155, 245, 0.55);
+      border: 1px solid rgba(151, 126, 214, 0.42);
       border-radius: 24px;
-      background-color: var(--navy-2);
+      background: linear-gradient(180deg, #0d1831 0%, #121d3a 100%);
       transition: all var(--transition-base);
     }
 
@@ -694,7 +695,7 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #72a9ff;
+      color: #b39ae9;
     }
 
     .experience-role {
@@ -710,14 +711,14 @@
       list-style: none;
       font-size: 15px;
       line-height: 1.7;
-      color: var(--text-soft);
+      color: #c8d0e6;
       display: grid;
       gap: 10px;
     }
 
     .experience-description li::before {
       content: "•";
-      color: #92bdff;
+      color: #c3adff;
       margin-right: 8px;
     }
 
@@ -727,8 +728,8 @@
       font-size: 12px;
       font-family: var(--font-mono);
       white-space: nowrap;
-      background-color: var(--chip-dark);
-      border: 1px solid var(--chip-line);
+      background-color: rgba(179, 154, 233, 0.12);
+      border: 1px solid rgba(179, 154, 233, 0.4);
       color: var(--white);
     }
 
@@ -867,7 +868,7 @@
     /* Skills Section */
     /* -------------------- */
     #skills {
-      background-color: var(--navy);
+      background: linear-gradient(180deg, #040b1b 0%, #091328 100%);
       color: var(--white);
       padding: 110px var(--space-3xl);
     }
@@ -917,7 +918,7 @@
       padding: 34px 36px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 26px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(173, 145, 232, 0.05));
       transition: all var(--transition-base);
       min-height: 290px;
       display: flex;
@@ -925,8 +926,8 @@
     }
 
     .skill-category:hover {
-      background-color: rgba(255, 255, 255, 0.07);
-      border-color: rgba(130, 171, 255, 0.28);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: rgba(173, 145, 232, 0.3);
       transform: translateY(-4px);
     }
 
@@ -938,8 +939,8 @@
       place-items: center;
       font-size: 40px;
       margin: 0 auto 28px;
-      background: linear-gradient(135deg, rgba(70, 153, 255, 0.32), rgba(59, 214, 223, 0.16));
-      border: 1px solid rgba(121, 177, 255, 0.22);
+      background: linear-gradient(135deg, rgba(129, 109, 188, 0.42), rgba(112, 177, 255, 0.18));
+      border: 1px solid rgba(173, 145, 232, 0.24);
     }
 
     .skill-category-title {
@@ -997,8 +998,8 @@
     /* -------------------- */
     #contact {
       background:
-        radial-gradient(circle at top right, rgba(129, 183, 255, 0.18), transparent 28%),
-        linear-gradient(180deg, #eef5ff 0%, #dbeaff 100%);
+        radial-gradient(circle at top right, rgba(186, 161, 255, 0.18), transparent 28%),
+        linear-gradient(180deg, #f5efff 0%, #e8ddff 100%);
       padding: 100px var(--space-3xl);
     }
 
@@ -1016,18 +1017,18 @@
       line-height: 1.3;
       letter-spacing: -1px;
       margin-bottom: var(--space-lg);
-      color: #173463;
+      color: #4e3c78;
     }
 
     .contact-tagline em {
       font-style: italic;
-      color: #5b77a8;
+      color: #816ea5;
     }
 
     .contact-text {
       font-size: 15px;
       line-height: 1.8;
-      color: #35517c;
+      color: #614d86;
       margin-bottom: 36px;
     }
 
@@ -1042,32 +1043,32 @@
       align-items: center;
       gap: var(--space-md);
       font-size: 14px;
-      color: #173463;
+      color: #4e3c78;
       transition: all var(--transition-fast);
       padding: 12px var(--space-md);
       border-radius: 12px;
-      border: 1px solid rgba(102, 144, 208, 0.2);
+      border: 1px solid rgba(145, 118, 210, 0.2);
       background-color: rgba(255, 255, 255, 0.7);
     }
 
     .contact-link:hover {
       background-color: rgba(255, 255, 255, 0.92);
-      border-color: #4f79b4;
+      border-color: #8a71bf;
     }
 
     .contact-link i {
       font-size: 18px;
       width: 24px;
-      color: #5b77a8;
+      color: #816ea5;
     }
 
     /* Contact Form */
     .contact-form-container {
       background-color: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(102, 144, 208, 0.2);
+      border: 1px solid rgba(145, 118, 210, 0.2);
       border-radius: 24px;
       padding: var(--space-2xl);
-      box-shadow: 0 18px 46px rgba(83, 124, 194, 0.1);
+      box-shadow: 0 18px 46px rgba(125, 101, 183, 0.11);
     }
 
     .form-title {
@@ -1076,7 +1077,7 @@
       font-weight: 600;
       margin-bottom: var(--space-xl);
       letter-spacing: -0.5px;
-      color: #173463;
+      color: #4e3c78;
     }
 
     .form-group {
@@ -1095,7 +1096,7 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #6b82aa;
+      color: #8975af;
       margin-bottom: var(--space-sm);
     }
 
@@ -1103,20 +1104,20 @@
     .form-textarea {
       width: 100%;
       padding: 14px 18px;
-      border: 1.5px solid rgba(102, 144, 208, 0.22);
+      border: 1.5px solid rgba(145, 118, 210, 0.22);
       border-radius: 12px;
       background-color: rgba(255, 255, 255, 0.92);
       font-family: var(--font-sans);
       font-size: 14px;
-      color: #173463;
+      color: #4e3c78;
       transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
       outline: none;
     }
 
     .form-input:focus,
     .form-textarea:focus {
-      border-color: #4b74b0;
-      box-shadow: 0 0 0 3px rgba(100, 145, 220, 0.16);
+      border-color: #8a71bf;
+      box-shadow: 0 0 0 3px rgba(168, 140, 228, 0.18);
     }
 
     .form-textarea {
@@ -1127,7 +1128,7 @@
     .form-submit {
       width: 100%;
       padding: var(--space-md);
-      background-color: #153a76;
+      background-color: #5f4b8b;
       color: var(--white);
       border: none;
       border-radius: 100px;
@@ -1141,9 +1142,9 @@
     }
 
     .form-submit:hover {
-      background-color: #0f2d5b;
+      background-color: #4d3c73;
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(21, 58, 118, 0.22);
+      box-shadow: 0 10px 24px rgba(95, 75, 139, 0.24);
     }
 
     .form-success {
@@ -1478,7 +1479,7 @@
   
     <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
-      <div class="project-card reveal">
+      <div class="project-card reveal">                     
         <div class="project-number">01</div>
         <div class="project-title">RAG AI Agent</div>
         <div class="project-description">
@@ -1654,11 +1655,11 @@
           </a>
           <a href="https://github.com/NishthaB1409" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="fab fa-github"></i>
-            github.com/NishthaB1409
+            GitHub
           </a>
           <a href="https://www.linkedin.com/in/nishtha-bhagyawant-507b721b9/" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="fab fa-linkedin-in"></i>
-            linkedin.com/in/nishtha-bhagyawant-507b721b9
+            LinkedIn
           </a>
           <a href="#" class="contact-link">
             <i class="fas fa-map-marker-alt"></i>
@@ -1718,12 +1719,50 @@
     let mouseX = 0, mouseY = 0;
     let ringX = 0, ringY = 0;
 
+    function parseColor(color) {
+      const match = color && color.match(/rgba?\(([^)]+)\)/);
+      if (!match) return null;
+      const parts = match[1].split(',').map(part => Number.parseFloat(part.trim()));
+      if (parts.length < 3) return null;
+      return {
+        r: parts[0],
+        g: parts[1],
+        b: parts[2],
+        a: parts.length > 3 ? parts[3] : 1
+      };
+    }
+
+    function isDarkColor(color) {
+      const parsed = parseColor(color);
+      if (!parsed || parsed.a === 0) return false;
+      const brightness = (parsed.r * 299 + parsed.g * 587 + parsed.b * 114) / 1000;
+      return brightness < 150;
+    }
+
+    function updateCursorTheme(x, y) {
+      const hovered = document.elementFromPoint(x, y);
+      let node = hovered;
+      let cursorColor = '#111111';
+
+      while (node && node !== document.body) {
+        const styles = window.getComputedStyle(node);
+        if (isDarkColor(styles.backgroundColor)) {
+          cursorColor = '#ffffff';
+          break;
+        }
+        node = node.parentElement;
+      }
+
+      document.documentElement.style.setProperty('--cursor-color', cursorColor);
+    }
+
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
       
       cursor.style.left = mouseX + 'px';
       cursor.style.top = mouseY + 'px';
+      updateCursorTheme(mouseX, mouseY);
     });
 
     function animateRing() {
