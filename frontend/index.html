@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nishtha Bhagyawant · AI Engineer</title>
+  <title>Nishtha Bhagyawant | AI Engineer</title>
   <meta name="description" content="AI Engineer specializing in LLMs, RAG pipelines, and computer vision solutions based in Berlin, Germany.">
   
   <!-- Fonts -->
@@ -38,6 +38,16 @@
       --accent: #2a2a2a;
       --success-green: #2a7a60;
       --success-bg: #d4f0e8;
+      --navy: #09152b;
+      --navy-2: #102142;
+      --navy-3: #162a52;
+      --text-soft: #b9c5dc;
+      --text-muted-dark: #6f7c98;
+      --line-dark: rgba(120, 160, 255, 0.22);
+      --chip-dark: rgba(100, 158, 255, 0.12);
+      --chip-line: rgba(122, 170, 255, 0.48);
+      --skill-track: rgba(255, 255, 255, 0.12);
+      --skill-fill: linear-gradient(90deg, #38d6df 0%, #77b6ff 100%);
       
       /* Typography */
       --font-serif: 'Playfair Display', serif;
@@ -136,11 +146,11 @@
       justify-content: space-between;
       align-items: center;
       padding: var(--space-lg) var(--space-3xl);
-      background-color: rgba(249, 247, 244, 0.85);
+      background-color: rgba(9, 21, 43, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       z-index: 100;
-      border-bottom: 1px solid var(--light-gray);
+      border-bottom: 1px solid var(--line-dark);
     }
 
     .navbar-logo {
@@ -148,6 +158,7 @@
       font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.5px;
+      color: var(--white);
     }
 
     .navbar-links {
@@ -161,11 +172,12 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.88);
       transition: color var(--transition-fast);
     }
 
     .navbar-links a:hover {
-      color: var(--gray);
+      color: #8ab7ff;
     }
 
     /* -------------------- */
@@ -230,6 +242,9 @@
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      background:
+        radial-gradient(circle at top left, rgba(118, 171, 255, 0.18), transparent 34%),
+        linear-gradient(135deg, #edf4ff 0%, #f7fbff 52%, #e7f1ff 100%);
     }
 
     .hero-content {
@@ -237,6 +252,7 @@
       flex-direction: column;
       justify-content: center;
       padding: 80px var(--space-3xl);
+      background: rgba(255, 255, 255, 0.35);
     }
 
     .hero-badge {
@@ -281,14 +297,14 @@
     .hero-name em {
       font-style: italic;
       font-weight: 400;
-      color: var(--gray);
+      color: #5f77a5;
     }
 
     .hero-title {
       font-family: var(--font-mono);
       font-size: 13px;
       letter-spacing: 0.12em;
-      color: var(--gray);
+      color: #47699d;
       text-transform: uppercase;
       margin-bottom: 28px;
     }
@@ -296,7 +312,7 @@
     .hero-bio {
       font-size: 16px;
       line-height: 1.75;
-      color: #555;
+      color: #35517c;
       max-width: 440px;
       margin-bottom: 40px;
     }
@@ -322,39 +338,39 @@
     }
 
     .btn-primary {
-      background-color: var(--black);
+      background-color: #153a76;
       color: var(--white);
       border: none;
     }
 
     .btn-primary:hover {
-      background-color: var(--charcoal);
+      background-color: #0f2d5b;
       transform: translateY(-2px);
     }
 
     .btn-outline {
       background-color: transparent;
-      color: var(--black);
-      border: 1.5px solid var(--black);
+      color: #153a76;
+      border: 1.5px solid #153a76;
     }
 
     .btn-outline:hover {
-      background-color: var(--black);
+      background-color: #153a76;
       color: var(--white);
       transform: translateY(-2px);
     }
 
     .btn-download {
       background-color: transparent;
-      color: var(--black);
-      border: 1.5px solid var(--pastel-mint);
+      color: #153a76;
+      border: 1.5px solid rgba(82, 132, 212, 0.35);
       display: inline-flex;
       align-items: center;
       gap: var(--space-sm);
     }
 
     .btn-download:hover {
-      background-color: var(--pastel-mint);
+      background-color: rgba(123, 173, 255, 0.18);
       transform: translateY(-2px);
     }
 
@@ -365,7 +381,7 @@
     /* Hero Visual */
     .hero-visual {
       position: relative;
-      background-color: var(--pastel-rose);
+      background: linear-gradient(160deg, #dbe9ff 0%, #bfd8ff 100%);
       overflow: hidden;
       display: flex;
       align-items: flex-end;
@@ -388,7 +404,7 @@
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      background-color: var(--pastel-lavender);
+      background-color: rgba(123, 158, 255, 0.45);
       top: -80px;
       right: -80px;
       opacity: 0.6;
@@ -399,7 +415,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background-color: var(--pastel-peach);
+      background-color: rgba(140, 210, 255, 0.42);
       bottom: 100px;
       left: -60px;
       opacity: 0.7;
@@ -497,8 +513,11 @@
     /* Education Section */
     /* -------------------- */
     #education {
-      background-color: var(--cream);
+      background:
+        linear-gradient(180deg, #eaf3ff 0%, #dceaff 100%);
       padding: 100px var(--space-3xl);
+      border-top: 1px solid rgba(97, 143, 214, 0.16);
+      border-bottom: 1px solid rgba(97, 143, 214, 0.16);
     }
 
     .education-grid {
@@ -509,11 +528,12 @@
 
     .education-card {
       padding: var(--space-xl);
-      background-color: var(--white);
+      background-color: rgba(255, 255, 255, 0.85);
       border-radius: 16px;
       margin-bottom: var(--space-md);
-      border: 1px solid var(--light-gray);
+      border: 1px solid rgba(102, 144, 208, 0.22);
       transition: all var(--transition-base);
+      box-shadow: 0 16px 38px rgba(92, 132, 198, 0.08);
     }
 
     .education-card:hover {
@@ -540,37 +560,39 @@
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 4px;
+      color: #173463;
     }
 
     .education-school {
       font-size: 13px;
-      color: var(--gray);
+      color: #56739f;
     }
 
     .education-year {
       font-family: var(--font-mono);
       font-size: 11px;
-      color: var(--gray);
+      color: #4e6f9f;
       padding: 4px 10px;
-      background-color: var(--cream);
+      background-color: rgba(141, 182, 246, 0.16);
       border-radius: 100px;
       display: inline-block;
       margin-top: var(--space-sm);
-      border: 1px solid var(--light-gray);
+      border: 1px solid rgba(102, 144, 208, 0.18);
     }
 
     .publication-card {
       padding: 28px;
-      background-color: var(--white);
+      background-color: rgba(255, 255, 255, 0.85);
       border-radius: 16px;
       margin-bottom: var(--space-md);
-      border: 1px solid var(--light-gray);
-      border-left: 4px solid var(--pastel-lavender);
+      border: 1px solid rgba(102, 144, 208, 0.22);
+      border-left: 4px solid #9ab6ea;
       transition: all var(--transition-base);
+      box-shadow: 0 16px 38px rgba(92, 132, 198, 0.08);
     }
 
     .publication-card:nth-child(2) {
-      border-left-color: var(--pastel-peach);
+      border-left-color: #7dd5f0;
     }
 
     .publication-card:hover {
@@ -586,18 +608,18 @@
     }
 
     .publication-title a {
-      color: var(--black);
+      color: #173463;
       text-decoration: none;
       transition: color var(--transition-fast);
     }
 
     .publication-title a:hover {
-      color: var(--gray);
+      color: #3e6db0;
     }
 
     .publication-venue {
       font-size: 12px;
-      color: var(--gray);
+      color: #5d78a1;
       font-style: italic;
       margin-bottom: var(--space-sm);
     }
@@ -606,7 +628,7 @@
       display: inline-block;
       font-size: 11px;
       font-family: var(--font-mono);
-      color: var(--charcoal);
+      color: #173463;
       text-decoration: underline;
       text-underline-offset: 4px;
       margin-top: var(--space-xs);
@@ -616,39 +638,40 @@
     /* Experience Section */
     /* -------------------- */
     #experience {
-      background-color: var(--white);
-      padding: 100px var(--space-3xl);
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 110px var(--space-3xl);
+      border-top: 1px solid var(--line-dark);
     }
 
     .experience-grid {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 22px;
     }
 
     .experience-card {
       display: grid;
-      grid-template-columns: 200px 1fr auto;
-      gap: 40px;
+      grid-template-columns: 240px minmax(0, 1fr) auto;
+      gap: 48px;
       align-items: start;
-      padding: 36px 40px;
-      border: 1px solid var(--light-gray);
-      border-radius: 16px;
-      background-color: var(--off-white);
+      padding: 42px 48px;
+      border: 1px solid rgba(110, 155, 245, 0.55);
+      border-radius: 24px;
+      background-color: var(--navy-2);
       transition: all var(--transition-base);
-      margin-bottom: var(--space-sm);
     }
 
     .experience-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 24px 60px rgba(2, 9, 22, 0.35);
     }
 
     .experience-header {
       display: flex;
       align-items: center;
       gap: var(--space-md);
-      margin-bottom: var(--space-xs);
+      margin-bottom: 12px;
     }
 
     .company-logo {
@@ -660,68 +683,81 @@
 
     .experience-date {
       font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--gray);
-      padding-top: var(--space-xs);
+      font-size: 13px;
+      color: #7eb2ff;
+      padding-top: 8px;
+      white-space: nowrap;
     }
 
     .experience-company {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--gray);
+      color: #72a9ff;
     }
 
     .experience-role {
       font-family: var(--font-serif);
-      font-size: 22px;
+      font-size: clamp(28px, 3vw, 44px);
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       letter-spacing: -0.5px;
+      color: var(--white);
     }
 
     .experience-description {
-      font-size: 14px;
+      list-style: none;
+      font-size: 15px;
       line-height: 1.7;
-      color: #555;
+      color: var(--text-soft);
+      display: grid;
+      gap: 10px;
+    }
+
+    .experience-description li::before {
+      content: "•";
+      color: #92bdff;
+      margin-right: 8px;
     }
 
     .experience-badge {
-      padding: 6px 14px;
+      padding: 10px 18px;
       border-radius: 100px;
-      font-size: 11px;
+      font-size: 12px;
       font-family: var(--font-mono);
       white-space: nowrap;
-      background-color: var(--cream);
-      border: 1px solid var(--light-gray);
-      color: var(--charcoal);
+      background-color: var(--chip-dark);
+      border: 1px solid var(--chip-line);
+      color: var(--white);
     }
 
     /* -------------------- */
     /* Projects Section */
     /* -------------------- */
     #projects {
-      background-color: var(--off-white);
-      padding: 100px var(--space-3xl);
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 110px var(--space-3xl);
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 28px;
     }
 
     .project-card {
-      border-radius: 20px;
-      padding: 40px;
+      border-radius: 28px;
+      padding: 48px;
       position: relative;
       overflow: hidden;
-      border: 1px solid var(--light-gray);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       transition: all var(--transition-base);
-      background-color: var(--white);
+      color: var(--navy);
       display: flex;
       flex-direction: column;
+      min-height: 380px;
     }
 
     .project-card:nth-child(odd) {
@@ -754,14 +790,14 @@
 
     .project-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
     }
 
     .project-number {
       font-family: var(--font-serif);
       font-size: 80px;
       font-weight: 700;
-      color: rgba(0, 0, 0, 0.07);
+      color: rgba(9, 21, 43, 0.09);
       position: absolute;
       top: -10px;
       right: 20px;
@@ -778,10 +814,11 @@
     }
 
     .project-description {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.7;
-      color: #444;
+      color: rgba(9, 21, 43, 0.8);
       margin-bottom: var(--space-lg);
+      max-width: 38ch;
     }
 
     .project-tags {
@@ -792,12 +829,12 @@
     }
 
     .project-tag {
-      padding: 5px 12px;
-      background-color: rgba(255, 255, 255, 0.7);
+      padding: 8px 16px;
+      background-color: rgba(255, 255, 255, 0.3);
       border-radius: 100px;
-      font-size: 11px;
+      font-size: 12px;
       font-family: var(--font-mono);
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(16, 33, 66, 0.35);
     }
 
     .project-links {
@@ -807,9 +844,9 @@
     }
 
     .project-link {
-      font-size: 13px;
+      font-size: 14px;
       font-family: var(--font-mono);
-      color: var(--charcoal);
+      color: var(--navy);
       text-decoration: underline;
       text-underline-offset: 4px;
       transition: color var(--transition-fast);
@@ -819,7 +856,7 @@
     }
 
     .project-link:hover {
-      color: var(--black);
+      color: #1a56b8;
     }
 
     .demo-link {
@@ -830,9 +867,9 @@
     /* Skills Section */
     /* -------------------- */
     #skills {
-      background-color: var(--black);
+      background-color: var(--navy);
       color: var(--white);
-      padding: 100px var(--space-3xl);
+      padding: 110px var(--space-3xl);
     }
 
     #skills .section-label {
@@ -840,6 +877,14 @@
     }
 
     #skills .section-label::after {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    #projects .section-label {
+      color: rgba(255, 255, 255, 0.48);
+    }
+
+    #projects .section-label::after {
       background-color: rgba(255, 255, 255, 0.15);
     }
 
@@ -851,68 +896,109 @@
       color: rgba(255, 255, 255, 0.35);
     }
 
+    #experience .section-title,
+    #projects .section-title,
+    #skills .section-title {
+      color: var(--white);
+    }
+
+    #experience .section-title em,
+    #projects .section-title em {
+      color: rgba(197, 210, 239, 0.62);
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      gap: 28px;
     }
 
     .skill-category {
-      padding: var(--space-xl);
+      padding: 34px 36px;
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      background-color: rgba(255, 255, 255, 0.04);
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
       transition: all var(--transition-base);
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
     }
 
     .skill-category:hover {
       background-color: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(130, 171, 255, 0.28);
+      transform: translateY(-4px);
     }
 
     .skill-icon {
-      font-size: 28px;
-      margin-bottom: var(--space-md);
+      width: 98px;
+      height: 98px;
+      border-radius: 28px;
+      display: grid;
+      place-items: center;
+      font-size: 40px;
+      margin: 0 auto 28px;
+      background: linear-gradient(135deg, rgba(70, 153, 255, 0.32), rgba(59, 214, 223, 0.16));
+      border: 1px solid rgba(121, 177, 255, 0.22);
     }
 
     .skill-category-title {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-md);
-      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px;
+      color: var(--white);
+      text-align: center;
     }
 
     .skill-list {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-sm);
+      display: grid;
+      gap: 8px;
+      margin-bottom: 28px;
     }
 
     .skill-list li {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.8);
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.72);
+      text-align: center;
     }
 
     .skill-list li::before {
-      content: '';
-      width: 4px;
-      height: 4px;
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      flex-shrink: 0;
+      content: none;
+    }
+
+    .skill-meter {
+      margin-top: auto;
+    }
+
+    .skill-bar {
+      height: 12px;
+      border-radius: 999px;
+      background-color: var(--skill-track);
+      overflow: hidden;
+    }
+
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--skill-fill);
+    }
+
+    .skill-percent {
+      margin-top: 14px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
     }
 
     /* -------------------- */
     /* Contact Section */
     /* -------------------- */
     #contact {
-      background-color: var(--white);
+      background:
+        radial-gradient(circle at top right, rgba(129, 183, 255, 0.18), transparent 28%),
+        linear-gradient(180deg, #eef5ff 0%, #dbeaff 100%);
       padding: 100px var(--space-3xl);
     }
 
@@ -930,17 +1016,18 @@
       line-height: 1.3;
       letter-spacing: -1px;
       margin-bottom: var(--space-lg);
+      color: #173463;
     }
 
     .contact-tagline em {
       font-style: italic;
-      color: var(--gray);
+      color: #5b77a8;
     }
 
     .contact-text {
       font-size: 15px;
       line-height: 1.8;
-      color: #555;
+      color: #35517c;
       margin-bottom: 36px;
     }
 
@@ -955,31 +1042,32 @@
       align-items: center;
       gap: var(--space-md);
       font-size: 14px;
-      color: var(--charcoal);
+      color: #173463;
       transition: all var(--transition-fast);
       padding: 12px var(--space-md);
       border-radius: 12px;
-      border: 1px solid var(--light-gray);
-      background-color: var(--off-white);
+      border: 1px solid rgba(102, 144, 208, 0.2);
+      background-color: rgba(255, 255, 255, 0.7);
     }
 
     .contact-link:hover {
-      background-color: var(--cream);
-      border-color: var(--charcoal);
+      background-color: rgba(255, 255, 255, 0.92);
+      border-color: #4f79b4;
     }
 
     .contact-link i {
       font-size: 18px;
       width: 24px;
-      color: var(--gray);
+      color: #5b77a8;
     }
 
     /* Contact Form */
     .contact-form-container {
-      background-color: var(--off-white);
-      border: 1px solid var(--light-gray);
+      background-color: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(102, 144, 208, 0.2);
       border-radius: 24px;
       padding: var(--space-2xl);
+      box-shadow: 0 18px 46px rgba(83, 124, 194, 0.1);
     }
 
     .form-title {
@@ -988,6 +1076,7 @@
       font-weight: 600;
       margin-bottom: var(--space-xl);
       letter-spacing: -0.5px;
+      color: #173463;
     }
 
     .form-group {
@@ -1006,7 +1095,7 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--gray);
+      color: #6b82aa;
       margin-bottom: var(--space-sm);
     }
 
@@ -1014,20 +1103,20 @@
     .form-textarea {
       width: 100%;
       padding: 14px 18px;
-      border: 1.5px solid var(--light-gray);
+      border: 1.5px solid rgba(102, 144, 208, 0.22);
       border-radius: 12px;
-      background-color: var(--white);
+      background-color: rgba(255, 255, 255, 0.92);
       font-family: var(--font-sans);
       font-size: 14px;
-      color: var(--black);
+      color: #173463;
       transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
       outline: none;
     }
 
     .form-input:focus,
     .form-textarea:focus {
-      border-color: var(--black);
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+      border-color: #4b74b0;
+      box-shadow: 0 0 0 3px rgba(100, 145, 220, 0.16);
     }
 
     .form-textarea {
@@ -1038,7 +1127,7 @@
     .form-submit {
       width: 100%;
       padding: var(--space-md);
-      background-color: var(--black);
+      background-color: #153a76;
       color: var(--white);
       border: none;
       border-radius: 100px;
@@ -1052,9 +1141,9 @@
     }
 
     .form-submit:hover {
-      background-color: var(--charcoal);
+      background-color: #0f2d5b;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 24px rgba(21, 58, 118, 0.22);
     }
 
     .form-success {
@@ -1121,6 +1210,15 @@
     /* Responsive Design */
     /* -------------------- */
     @media (max-width: 1200px) {
+      .experience-card {
+        grid-template-columns: 220px minmax(0, 1fr);
+      }
+
+      .experience-badge {
+        grid-column: 2;
+        justify-self: start;
+      }
+
       .skills-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -1174,8 +1272,12 @@
 
       .experience-card {
         grid-template-columns: 1fr;
-        gap: var(--space-md);
-        padding: var(--space-lg);
+        gap: 18px;
+        padding: 28px;
+      }
+
+      .experience-badge {
+        grid-column: auto;
       }
 
       .education-grid,
@@ -1201,6 +1303,11 @@
     @media (max-width: 600px) {
       .skills-grid {
         grid-template-columns: 1fr;
+      }
+
+      .project-card,
+      .skill-category {
+        padding: 32px 24px;
       }
       
       .hero-cta {
@@ -1273,62 +1380,9 @@
       <!-- ========================================= -->
       
       <!-- OPTION 1: Image in frontend folder (recommended based on your structure) -->
-      <img class="hero-image" src="./photo .jpeg" alt="Garima Swami" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x533?text=Garima+Swami'">
+      <img class="hero-image" src="./photo .jpeg" alt="Nishtha Bhagyawant portrait" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x533?text=Nishtha+Bhagyawant'">
       </div>
   </section>
-
-  <!-- Debug Script - This will show you what files are loading -->
-  <script>
-    console.log('🔍 Current page URL:', window.location.href);
-    console.log('🔍 Current directory:', window.location.pathname);
-    
-    // Test image paths
-    const imagePaths = [
-      'frontend/photo .jpeg',
-      './frontend/photo .jpeg',
-      '/frontend/photo .jpeg',
-      'photo .jpeg',
-      './photo .jpeg',
-      '/photo .jpeg',
-      'images/photo .jpeg',
-      'frontend/Photo.jpg'
-    ];
-    
-    console.log('🔍 Testing image paths...');
-    imagePaths.forEach(path => {
-      const img = new Image();
-      img.onload = () => console.log('✅ IMAGE WORKS: ' + path);
-      img.onerror = () => console.log('❌ IMAGE FAILS: ' + path);
-      img.src = path;
-    });
-    
-    // Test PDF paths
-    const pdfPaths = [
-      'frontend/GarimaCV.pdf',
-      './frontend/GarimaCV.pdf',
-      '/frontend/GarimaCV.pdf',
-      'GarimaCV.pdf',
-      './GarimaCV.pdf',
-      '/GarimaCV.pdf',
-      'pdf/GarimaCV.pdf',
-      'assets/GarimaCV.pdf'
-    ];
-    
-    console.log('🔍 Testing PDF paths...');
-    pdfPaths.forEach(path => {
-      fetch(path, { method: 'HEAD' })
-        .then(response => {
-          if (response.ok) {
-            console.log('✅ PDF WORKS: ' + path);
-          } else {
-            console.log('❌ PDF FAILS: ' + path);
-          }
-        })
-        .catch(() => console.log('❌ PDF FAILS: ' + path));
-    });
-  </script>
-
-  
 
   <!-- Education Section -->
   <section id="education">
@@ -1380,293 +1434,214 @@
   <section id="experience">
     <h2 class="section-title">Work<br><em>Experience</em></h2>
     <div class="experience-grid">
-      
-      <!-- LTI -->
       <div class="experience-card reveal">
-        <div class="experience-date">07.2024 — 04.2025</div>
+        <div class="experience-date">Nov 2024 - Oct 2025</div>
         <div>
           <div class="experience-header">
-            <img class="company-logo" src="https://logo.clearbit.com/codingpro.com" alt="CodingPro Logo" onerror="this.style.display='none'">
-            <div class="experience-company">CodingPro · Bengaluru, India</div>
+            <div class="experience-company">LTI - Larsen &amp; Toubro Infotech - Mumbai, India</div>
           </div>
-          <div class="experience-role">Software Developer</div>
-          <div class="experience-description">
-            • Supported training and fine-tuning of transformer-based NLP models using PyTorch/TensorFlow, including dataset preparation and validation workflows for production use.<br>
-            • Built and maintained ML pipelines for preprocessing large unstructured datasets (interview transcripts, text responses) used for model training and evaluation.<br>
-            • Contributed to model benchmarking by monitoring key KPIs such as validation accuracy, response quality, and inference latency.<br>
-            • Supported deployment of inference services in Docker-based containerized environments, ensuring scalable and production-ready integration.<br>
-            • Developed a React-based proof-of-concept web interface to demonstrate AI model capabilities in real-time interview simulations.<br>
-            • Optimized inference workflows to improve latency and overall system stability.
-          </div>
+          <div class="experience-role">Software Developer - AI/ML</div>
+          <ul class="experience-description">
+            <li>Designed and deployed AI/ML-driven solutions using Python, applying machine learning and prompt engineering to solve real-world business problems.</li>
+            <li>Built scalable, production-ready APIs with FastAPI and Flask, integrating ML models into applications for efficient inference.</li>
+            <li>Leveraged AWS services including S3, EC2, and Lambda to support cloud-based ML pipelines and deployment.</li>
+            <li>Improved model performance through data preprocessing, feature engineering, and hyperparameter tuning.</li>
+            <li>Collaborated with cross-functional teams to translate business requirements into robust AI solutions.</li>
+          </ul>
         </div>
-        <div class="experience-badge">PyTorch · NLP · Docker</div>
+        <div class="experience-badge">Python · FastAPI · AWS · Prompt Engineering</div>
       </div>
-      
-      <!-- ISRO -->
+
       <div class="experience-card reveal">
-        <div class="experience-date">02.2024 — 05.2024</div>
+        <div class="experience-date">Jan 2024 - Mar 2024</div>
         <div>
           <div class="experience-header">
-            <img class="company-logo" src="https://logo.clearbit.com/isro.gov.in" alt="ISRO Logo" onerror="this.style.display='none'">
-            <div class="experience-company">ISRO · Bengaluru, India</div>
+            <div class="experience-company">Exposys Data Labs - Remote</div>
           </div>
-          <div class="experience-role">Software Developer, Project Trainee</div>
-          <div class="experience-description">
-            • Built a speech-based AI system for employee information retrieval, enabling audio-driven attendance and automated performance analysis using NLP.<br>
-            • Processed and validated large structured and unstructured datasets for model training, evaluation, and scalable system design.<br>
-            • Developed FMECA (Failure Modes, Effects, and Criticality Analysis) automation software to analyze spacecraft failure modes and compute risk prioritization metrics.<br>
-            • Designed dynamic reporting and validation workflows to ensure accurate, engineering-grade reliability assessments.
-          </div>
+          <div class="experience-role">Data Science Intern</div>
+          <ul class="experience-description">
+            <li>Developed and evaluated machine learning models using Python and Scikit-learn for classification and regression on real-world datasets.</li>
+            <li>Conducted exploratory data analysis, data cleaning, and feature engineering to improve data quality and model performance.</li>
+            <li>Applied statistical analysis and model evaluation techniques to uncover insights and strengthen predictive accuracy.</li>
+            <li>Designed Power BI dashboards and reports to visualize trends and support stakeholder decision-making.</li>
+          </ul>
         </div>
-        <div class="experience-badge">Speech AI · NLP · FMECA</div>
+        <div class="experience-badge">EDA · Power BI · Feature Engineering · Speech AI</div>
       </div>
+
       
-      <!-- Municipal Corporation of Delhi -->
-      <div class="experience-card reveal">
-        <div class="experience-date">06.2023 — 07.2023</div>
-        <div>
-          <div class="experience-header">
-            <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Municipal_Corporation_of_Delhi_logo.svg/1200px-Municipal_Corporation_of_Delhi_logo.svg.png" alt="MCD Logo" onerror="this.style.display='none'">
-            <div class="experience-company">Municipal Corporation of Delhi · Delhi, India</div>
-          </div>
-          <div class="experience-role">Full Stack Intern</div>
-          <div class="experience-description">
-            • Developed smart urban solutions for efficient waste management, utilizing technologies such as Java, NLP, IoT, geotagging, GIS, and cloud computing.
-          </div>
-        </div>
-        <div class="experience-badge">IoT · GIS · Cloud</div>
-      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
-    <div class="section-label">Selected Work</div>
-    <h2 class="section-title">Projects that<br><em>Define Me</em></h2>
+  
+    <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
-      
-      <!-- Project 1: Production Ready RAG AI Agent -->
       <div class="project-card reveal">
         <div class="project-number">01</div>
-        <div class="project-title">End-to-End MLOps Pipeline</div>
+        <div class="project-title">RAG AI Agent</div>
         <div class="project-description">
-          A production-ready machine learning operations pipeline built on AWS, featuring automated CI/CD workflows, containerized model serving with Docker, and full monitoring and observability. Integrated logging and alerting systems for proactive maintenance and error tracking. Leveraged infrastructure as code (IaC) for seamless environments setup and scalability.
+          A production-ready Retrieval-Augmented Generation system that combines vector-based retrieval, document ingestion, and agentic workflow support to deliver accurate, context-aware answers from custom knowledge bases.
         </div>
         <div class="project-tags">
-          <span class="project-tag">AWS</span>
-          <span class="project-tag">Docker</span>
-          <span class="project-tag">CI/CD</span>
           <span class="project-tag">Python</span>
-          <span class="project-tag">MLOps</span>
-          <span class="project-tag">IaC</span>
+          <span class="project-tag">Streamlit</span>
+          <span class="project-tag">Qdrant</span>
+          <span class="project-tag">Inngest</span>
+          <span class="project-tag">LlamaIndex</span>
+          <span class="project-tag">OpenAI</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/NishthaB1409/rag-ai-agent" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub →</a>
-          <!-- Project Link -->
+          <a href="https://github.com/NishthaB1409/rag-ai-agent" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub -&gt;</a>
+        </div>
       </div>
 
-      <!-- Project 2: AI Git CI/CD Analysis -->
       <div class="project-card reveal">
         <div class="project-number">02</div>
-        <div class="project-title">Enterprise Knowledge Assistant</div>
+        <div class="project-title">AI Log Analysis System</div>
         <div class="project-description">
-          Built retrieval-augmented generation (RAG) pipeline with semantic indexing and hybrid search. Implemented document ingestion, chunking strategies, and embedding-based retrieval. Designed FastAPI backend for real-time querying. Containerized full-stack system for scalable deployment. Evaluated retrieval accuracy and optimized similarity thresholds.
+          Developed a scalable system to process and analyze large-scale CI/CD logs, detect recurring failures, and surface anomalies for much faster debugging.
         </div>
         <div class="project-tags">
-          <span class="project-tag">RAG</span>
-          <span class="project-tag">LangChain</span>
-          <span class="project-tag">FAISS</span>
-          <span class="project-tag">ChromaDB</span>
-          <span class="project-tag">LLMs</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">Docker</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">CI/CD</span>
+          <span class="project-tag">Log Analysis</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/NishthaB1409/git-ci-log-analysis" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub →</a>
+          <a href="https://github.com/NishthaB1409/git-ci-log-analysis" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub -&gt;</a>
         </div>
       </div>
 
-      <!-- Project 3: Repository Analysis Tool -->
       <div class="project-card reveal">
         <div class="project-number">03</div>
-        <div class="project-title">Braitenberg Vehicle Simulation</div>
+        <div class="project-title">Repository Analysis Tool</div>
         <div class="project-description">
-          Behavior-Based Autonomous AI Agent Simulation using Braitenberg Vehicles. Implemented autonomous agent behaviors based on sensor inputs, demonstrating emergent behaviors and robotics AI principles.
+          Designed and implemented a scalable backend system with REST APIs to analyze repository activity, validate repository metrics, and power a developer-focused analytics dashboard.
         </div>
         <div class="project-tags">
-          <span class="project-tag">AI</span>
-          <span class="project-tag">Robotics</span>
-          <span class="project-tag">Simulation</span>
           <span class="project-tag">Python</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">REST APIs</span>
+          <span class="project-tag">React (Vite)</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/NishthaB1409/gitlab-repository-analysis-tool" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub →</a>
+          <a href="https://github.com/NishthaB1409/gitlab-repository-analysis-tool" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub -&gt;</a>
+          <a href="https://gitlab-repository-analysis-tool.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link"> Link -&gt;</a>
         </div>
-      </div>      
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
   <section id="skills">
-    <div class="section-label">Capabilities</div>
+   
     <h2 class="section-title">Skills &<br><em>Expertise</em></h2>
     <div class="skills-grid">
-      
-      <!-- AI/ML -->
+      <div class="skill-category reveal">
+        <div class="skill-icon"><i class="fab fa-python"></i></div>
+        <div class="skill-category-title">Python</div>
+        <ul class="skill-list">
+          <li>Automation</li>
+          <li>Backend services</li>
+          <li>ML workflows</li>
+        </ul>
+        <div class="skill-meter">
+          <div class="skill-bar"><span style="width: 95%"></span></div>
+          <div class="skill-percent">95%</div>
+        </div>
+      </div>
+
       <div class="skill-category reveal">
         <div class="skill-icon"><i class="fas fa-brain"></i></div>
-        <div class="skill-category-title">AI / Machine Learning</div>
+        <div class="skill-category-title">AI / Agentic AI</div>
         <ul class="skill-list">
-          <li>Python</li>
+          <li>GPT and Qwen</li>
+          <li>Prompt engineering</li>
+          <li>RAG architecture</li>
+        </ul>
+        <div class="skill-meter">
+          <div class="skill-bar"><span style="width: 92%"></span></div>
+          <div class="skill-percent">92%</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+        <div class="skill-category-title">FastAPI & APIs</div>
+        <ul class="skill-list">
+          <li>REST APIs</li>
+          <li>Flask</li>
+          <li>Scalable services</li>
+        </ul>
+        <div class="skill-meter">
+          <div class="skill-bar"><span style="width: 90%"></span></div>
+          <div class="skill-percent">90%</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-icon"><i class="fas fa-flask"></i></div>
+        <div class="skill-category-title">ML Frameworks</div>
+        <ul class="skill-list">
           <li>PyTorch</li>
           <li>TensorFlow</li>
-          <li>Scikit-learn</li>
           <li>Hugging Face</li>
-          <li>NLP / LLMs</li>
-          <li>Prompt Engineering</li>
-          <li>Retrieval-Augmented Generation (RAG)</li>
-          <li>Computer Vision</li>
-          <li>Model Training & Evaluation</li>
-          <li>Transformer Architectures</li>
-          <li>Hyperparameter Optimization</li>
-          <li>Performance Benchmarking</li>
-          <li>JAX (Basic Exposure)</li>
         </ul>
+        <div class="skill-meter">
+          <div class="skill-bar"><span style="width: 88%"></span></div>
+          <div class="skill-percent">88%</div>
+        </div>
       </div>
 
-      <!-- Cloud & MLOps -->
       <div class="skill-category reveal">
         <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-        <div class="skill-category-title">Cloud & MLOps</div>
+        <div class="skill-category-title">Cloud & DevOps</div>
         <ul class="skill-list">
-          <li>AWS (EC2, S3, IAM)</li>
-          <li>AWS Elastic Beanstalk</li>
-          <li>AWS CloudWatch</li>
+          <li>AWS EC2, SageMaker, IAM</li>
           <li>Docker</li>
-          <li>Kubernetes (Basic)</li>
-          <li>OpenShift (Exposure)</li>
-          <li>CI/CD (GitHub Actions)</li>
-          <li>Infrastructure as Code</li>
-          <li>Model Deployment</li>
-          <li>Auto-scaling</li>
-          <li>API Monitoring</li>
-          <li>Model Monitoring & Logging</li>
+          <li>CI/CD</li>
         </ul>
+        <div class="skill-meter">
+          <div class="skill-bar"><span style="width: 86%"></span></div>
+          <div class="skill-percent">86%</div>
+        </div>
       </div>
 
-      <!-- Backend Engineering -->
       <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-code"></i></div>
-        <div class="skill-category-title">Backend Engineering</div>
+        <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+        <div class="skill-category-title">Software Engineering</div>
         <ul class="skill-list">
-          <li>Python</li>
-          <li>Java</li>
-          <li>Flask</li>
-          <li>FastAPI</li>
-          <li>REST APIs</li>
-          <li>OOP</li>
-          <li>Linux</li>
+          <li>Design patterns</li>
           <li>Git</li>
+          <li>Code quality</li>
         </ul>
+        <div class="skill-meter">
+          <div class="skill-bar"><span style="width: 89%"></span></div>
+          <div class="skill-percent">89%</div>
+        </div>
       </div>
 
-      <!-- Data Engineering -->
       <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-database"></i></div>
-        <div class="skill-category-title">Data Engineering</div>
+        <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+        <div class="skill-category-title">Data & Analytics</div>
         <ul class="skill-list">
-          <li>NumPy</li>
-          <li>Pandas</li>
-          <li>SciPy</li>
-          <li>ETL Pipelines</li>
-          <li>Feature Engineering</li>
-          <li>Data Preprocessing</li>
-          <li>Large Structured & Unstructured Data</li>
+          <li>EDA</li>
+          <li>Feature engineering</li>
+          <li>Model evaluation</li>
         </ul>
+        <div class="skill-meter">
+          <div class="skill-bar"><span style="width: 85%"></span></div>
+          <div class="skill-percent">85%</div>
+        </div>
       </div>
 
-      <!-- Databases & Vector Search -->
-      <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-search"></i></div>
-        <div class="skill-category-title">Databases & Vector Search</div>
-        <ul class="skill-list">
-          <li>SQL</li>
-          <li>MySQL</li>
-          <li>FAISS</li>
-          <li>ChromaDB</li>
-        </ul>
-      </div>
-
-      <!-- Monitoring & Testing -->
-      <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-        <div class="skill-category-title">Monitoring & Testing</div>
-        <ul class="skill-list">
-          <li>Prometheus</li>
-          <li>Grafana</li>
-          <li>pytest</li>
-          <li>unittest</li>
-          <li>Matplotlib</li>
-          <li>Jupyter Notebook</li>
-        </ul>
-      </div>
-
-      <!-- Frontend -->
-      <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
-        <div class="skill-category-title">Frontend</div>
-        <ul class="skill-list">
-          <li>React (Proof-of-Concept)</li>
-          <li>API Integration</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>Responsive UI</li>
-        </ul>
-      </div>
-
-      <!-- Development Tools -->
-      <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-tools"></i></div>
-        <div class="skill-category-title">Development Tools</div>
-        <ul class="skill-list">
-          <li>Linux</li>
-          <li>Vim</li>
-          <li>GitHub</li>
-          <li>VS Code</li>
-          <li>Postman</li>
-          <li>Bash</li>
-        </ul>
-      </div>
-
-      <!-- Audio & NLP Systems -->
-      <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-microphone-alt"></i></div>
-        <div class="skill-category-title">Audio & NLP Systems</div>
-        <ul class="skill-list">
-          <li>Speech Recognition</li>
-          <li>Semantic Analysis</li>
-          <li>Transformer-based NLP</li>
-          <li>Large-Scale Text & Audio Processing</li>
-        </ul>
-      </div>
-
-      <!-- Languages -->
-      <div class="skill-category reveal">
-        <div class="skill-icon"><i class="fas fa-language"></i></div>
-        <div class="skill-category-title">Languages</div>
-        <ul class="skill-list">
-          <li>English (C1 - Fluent)</li>
-          <li>German (A2-B1)</li>
-          <li>Hindi (Native)</li>
-        </ul>
-      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <div class="section-label">Say Hello</div>
+
     <h2 class="section-title">Let's <em>Connect</em></h2>
     <div class="contact-grid">
       <div class="contact-info reveal">
@@ -1697,24 +1672,20 @@
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="firstName">First Name</label>
-              <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Jane" required>
+              <input class="form-input" type="text" id="firstName" name="firstName" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="lastName">Last Name</label>
-              <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Doe" required>
+              <input class="form-input" type="text" id="lastName" name="lastName" required>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label" for="email">Email Address</label>
-            <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="subject">Subject</label>
-            <input class="form-input" type="text" id="subject" name="subject" placeholder="Project Collaboration" required>
+            <input class="form-input" type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+            <textarea class="form-textarea" id="message" name="message" required></textarea>
           </div>
           <button type="submit" class="form-submit">Send Message →</button>
           <div class="form-success" id="formSuccess">
@@ -1731,12 +1702,12 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-logo">NB</div>
-    <div>© 2026 Made with ❤️ and lots of ☕ · Nishtha Bhagyawant </div>
+    <div>&copy; 2026 Made with ❤️ & lots of ☕ · Nishtha Bhagyawant</div>
     <div class="footer-social">
-      <a href="mailto:garimaswami646@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:nishthabhagyawant@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/NishthaB1409" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/nishtha-bhagyawant-507b721b9/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-      
+    </div>
   </footer>
 
   <script>
